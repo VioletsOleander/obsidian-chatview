@@ -2,33 +2,37 @@
   "name": "obsidian-chatview",
   "version": "1.0.0",
   "description": "Chat with LLM in obsidian",
+  "keywords": [],
+  "license": "MIT",
+  "author": "VioletsOleander",
+  "type": "module",
   "main": "main.js",
   "scripts": {
     "dev": "node esbuild.config.mjs",
-    "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production"
+    "build": "tsc --noEmit --skipLibCheck && node esbuild.config.mjs production",
+    "lint": "oxlint",
+    "fmt": "prettier . --write",
+    "check-fmt": "prettier . --check"
   },
-  "keywords": [],
-  "author": "VioletsOleander",
-  "license": "MIT",
+  "dependencies": {
+    "obsidian": "latest",
+    "openai": "^6.37.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.6",
+    "esbuild": "0.25.5",
+    "globals": "14.0.0",
+    "jiti": "2.6.1",
+    "oxlint": "^1.63.0",
+    "prettier": "3.8.3",
+    "tslib": "2.4.0",
+    "typescript": "^5.8.3"
+  },
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
       "version": "^11.0.9",
       "onFail": "download"
     }
-  },
-  "type": "module",
-  "devDependencies": {
-    "@biomejs/biome": "2.4.14",
-    "@types/node": "^16.11.6",
-    "esbuild": "0.25.5",
-    "globals": "14.0.0",
-    "jiti": "2.6.1",
-    "tslib": "2.4.0",
-    "typescript": "^5.8.3"
-  },
-  "dependencies": {
-    "obsidian": "latest",
-    "openai": "^6.37.0"
   }
 }
