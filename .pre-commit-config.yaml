@@ -1,0 +1,13 @@
+repos:
+  - repo: local
+    hooks:
+      - id: check-format
+        name: Check Format
+        entry: pnpm exec prettier --check
+        language: unsupported
+        types_or: [ts, json, yaml, markdown]
+      - id: check-lint
+        name: Check Lint
+        entry: pnpm exec oxlint
+        language: unsupported
+        types: [ts]
