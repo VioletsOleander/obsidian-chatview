@@ -1,9 +1,9 @@
 {
-    "id": "obsidian-chatview",
-    "name": "Obsidian ChatView",
-    "version": "1.0.0",
-    "minAppVersion": "0.15.0",
-    "description": "Chat with LLM in Obsidian",
-    "author": "VioletsOleader",
-    "isDesktopOnly": false
+  "id": "obsidian-chatview",
+  "name": "ChatView",
+  "version": "1.0.0",
+  "minAppVersion": "0.15.0",
+  "description": "Chat with LLM in Obsidian",
+  "author": "VioletsOleander",
+  "isDesktopOnly": false
 }
