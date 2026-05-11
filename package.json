@@ -16,14 +16,14 @@
   },
   "dependencies": {
     "obsidian": "latest",
-    "openai": "^6.37.0",
-    "oxlint": "^1.63.0"
+    "openai": "^6.37.0"
   },
   "devDependencies": {
     "@types/node": "^16.11.6",
     "esbuild": "0.25.5",
     "globals": "14.0.0",
     "jiti": "2.6.1",
+    "oxlint": "^1.63.0",
     "prettier": "3.8.3",
     "tslib": "2.4.0",
     "typescript": "^5.8.3"
