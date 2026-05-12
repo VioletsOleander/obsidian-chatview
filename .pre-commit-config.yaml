@@ -3,9 +3,9 @@ repos:
     hooks:
       - id: check-format
         name: Check Format
-        entry: pnpm exec prettier --check
+        entry: pnpm exec oxfmt --check
         language: system
-        types_or: [ts, json, yaml, markdown]
+        types_or: [ts, json, yaml]
       - id: check-lint
         name: Check Lint
         entry: pnpm exec oxlint

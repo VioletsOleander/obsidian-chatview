@@ -1,6 +1,6 @@
 {
-  "id": "obsidian-chatview",
-  "name": "ChatView",
+  "id": "obsidian-chatspace",
+  "name": "ChatSpace",
   "version": "1.0.0",
   "minAppVersion": "0.15.0",
   "description": "Chat with LLM in Obsidian",

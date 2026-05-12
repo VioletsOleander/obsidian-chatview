@@ -1,5 +1,5 @@
 {
-  "name": "obsidian-chatview",
+  "name": "obsidian-chatspace",
   "version": "1.0.0",
   "description": "Chat with LLM in obsidian",
   "keywords": [],
@@ -11,8 +11,8 @@
     "dev": "node esbuild.config.mjs",
     "build": "tsc --noEmit --skipLibCheck && node esbuild.config.mjs production",
     "lint": "oxlint",
-    "fmt": "prettier . --write",
-    "check-fmt": "prettier . --check"
+    "fmt": "oxfmt",
+    "check-fmt": "oxfmt --check"
   },
   "dependencies": {
     "obsidian": "latest",
@@ -23,8 +23,8 @@
     "esbuild": "0.25.5",
     "globals": "14.0.0",
     "jiti": "2.6.1",
+    "oxfmt": "^0.48.0",
     "oxlint": "^1.63.0",
-    "prettier": "3.8.3",
     "tslib": "2.4.0",
     "typescript": "^5.8.3"
   },
