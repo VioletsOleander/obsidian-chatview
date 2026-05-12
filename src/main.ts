@@ -6,7 +6,7 @@ import { ChatView } from "./view";
 class ChatSpace extends Plugin {
   settings: ChatSpaceSetting;
 
-  async onload() {
+  async onload(): Promise<void> {
     console.log("Loading ChatSpace plugin");
 
     await this.loadSettings();
@@ -18,25 +18,27 @@ class ChatSpace extends Plugin {
     });
   }
 
-  async onunload() {
+  async onunload(): Promise<void> {
     console.log("Unloading ChatSpace plugin");
+
+    this.app.workspace.detachLeavesOfType(ChatView.viewType);
   }
 
   /** Save settings to `data.json`. */
-  async saveSettings() {
+  async saveSettings(): Promise<void> {
     await this.saveData(this.settings);
   }
 
   /** Load `this.settings` from `data.json` or default values. */
-  private async loadSettings() {
+  private async loadSettings(): Promise<void> {
     // Later source overwrite earlier ones
     this.settings = Object.assign({}, DEFAULT_SETTING, await this.loadData());
   }
 
-  /** Reveal exsiting view or create a new one. */
-  private async activateView(viewType: string) {
+  /** Reveal existing view or create a new one. */
+  private async activateView(viewType: string): Promise<void> {
     const workspace = this.app.workspace;
-    const firstLeaf = workspace.getLeavesOfType(ChatView.viewType)[0];
+    const firstLeaf = workspace.getLeavesOfType(viewType)[0];
 
     let leaf: WorkspaceLeaf;
 

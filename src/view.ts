@@ -18,13 +18,13 @@ class ChatView extends ItemView {
     return "Chat View";
   }
 
-  async onOpen() {
+  async onOpen(): Promise<void> {
     const container = this.contentEl;
     container.empty();
     container.createEl("h4", { text: "Example view" });
   }
 
-  async onClose() {
+  async onClose(): Promise<void> {
     // Nothing to clean up.
   }
 }
