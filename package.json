@@ -1,18 +1,20 @@
 {
+  "$schema": "https://www.schemastore.org/package.json",
   "name": "obsidian-chatspace",
   "version": "1.0.0",
   "description": "Chat with LLM in obsidian",
-  "keywords": [],
-  "license": "MIT",
   "author": "VioletsOleander",
-  "type": "module",
+  "license": "MIT",
   "main": "main.js",
+  "type": "module",
   "scripts": {
     "dev": "node esbuild.config.mjs",
-    "build": "tsc --noEmit --skipLibCheck && node esbuild.config.mjs production",
+    "build": "node esbuild.config.mjs production",
+    "check-type": "tsc",
     "lint": "oxlint",
-    "fmt": "oxfmt",
-    "check-fmt": "oxfmt --check"
+    "fmt": "dprint fmt",
+    "check-fmt": "dprint check",
+    "svelte-check": "svelte-check --tsconfig tsconfig.json"
   },
   "dependencies": {
     "obsidian": "latest",
@@ -21,18 +23,14 @@
   "devDependencies": {
     "@types/node": "^16.11.6",
     "esbuild": "0.25.5",
+    "esbuild-svelte": "^0.9.5",
     "globals": "14.0.0",
     "jiti": "2.6.1",
-    "oxfmt": "^0.48.0",
     "oxlint": "^1.63.0",
-    "tslib": "2.4.0",
-    "typescript": "^5.8.3"
-  },
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "^11.0.9",
-      "onFail": "download"
-    }
+    "svelte": "^5.55.5",
+    "svelte-check": "^4.4.8",
+    "svelte-preprocess": "^6.0.3",
+    "typescript": "^5.8.3",
+    "typescript-svelte-plugin": "^0.3.52"
   }
 }

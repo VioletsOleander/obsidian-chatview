@@ -3,11 +3,11 @@ repos:
     hooks:
       - id: check-format
         name: Check Format
-        entry: pnpm exec oxfmt --check
+        entry: dprint check
         language: system
         types_or: [ts, json, yaml]
       - id: check-lint
         name: Check Lint
-        entry: pnpm exec oxlint
+        entry: npm x oxlint
         language: system
         types: [ts]
