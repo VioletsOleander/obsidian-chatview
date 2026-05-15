@@ -11,7 +11,7 @@
     "dev": "node esbuild.config.mjs",
     "build": "node esbuild.config.mjs production",
     "check-type": "tsc",
-    "lint": "oxlint",
+    "lint": "eslint .",
     "fmt": "dprint fmt",
     "check-fmt": "dprint check",
     "svelte-check": "svelte-check --tsconfig tsconfig.json"
@@ -22,6 +22,8 @@
   },
   "devDependencies": {
     "@types/node": "^16.11.6",
+    "@eslint/js": "9.30.1",
+    "eslint-plugin-obsidianmd": "0.1.9",
     "esbuild": "0.25.5",
     "esbuild-svelte": "^0.9.5",
     "globals": "14.0.0",
