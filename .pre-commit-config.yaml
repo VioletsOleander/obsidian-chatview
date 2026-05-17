@@ -3,7 +3,7 @@ repos:
     hooks:
       - id: check-format
         name: Check Format
-        entry: dprint check
+        entry: dprint check --allow-no-files
         language: system
         types_or: [ts, javascript, json, yaml, markdown, svelte]
       - id: check-lint
