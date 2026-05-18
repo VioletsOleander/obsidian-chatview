@@ -24,7 +24,6 @@ const config = defineConfig([
   ...obsidianmd.configs.recommended,
   globalIgnores([
     "dist/",
-    "main.js",
     "build.js",
     "eslint.config.js",
   ]),
